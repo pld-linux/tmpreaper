@@ -1,0 +1,8 @@
+[Unit]
+Description=tmpreaper cronjob timer
+
+[Timer]
+OnCalendar=hourly
+
+[Install]
+WantedBy=cronjobs.target

@@ -1,0 +1,4 @@
+MAILTO=root
+
+# tmpreaper to run hourly
+02 * * * * root /usr/lib/tmpreaper

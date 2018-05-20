@@ -1,0 +1,4 @@
+# Customized setings for tmpreaper
+
+# Options for cron tmpreaper call:
+OPTIONS="-fq"

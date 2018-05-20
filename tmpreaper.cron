@@ -1,0 +1,13 @@
+#!/bin/sh
+OPTIONS="-fq"
+
+if [ -f /etc/sysconfig/tmpreaper ]; then
+	. /etc/sysconfig/tmpreaper
+fi
+
+# process extra .conf files
+for file in /etc/tmpreaper/*.conf; do
+	grep ^/ ${file} | while read DIRECTORY TIME OPTS; do
+		/usr/sbin/tmpreaper ${OPTIONS} ${OPTS} ${TIME} ${DIRECTORY}
+	done
+done
